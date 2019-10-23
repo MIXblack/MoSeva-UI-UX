@@ -39,6 +39,9 @@
 		<!-- Font-awesome  Css -->
 		<link href="../resources/css/icons.css" rel="stylesheet"/>
 
+		<!-- Accordion Css -->
+		<link href="../resources/plugins/accordion/accordion.css" rel="stylesheet" />
+
 		<!--Horizontal Menu-->
 		<link href="../resources/plugins/Horizontal2/Horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
 		<link href="../resources/plugins/Horizontal2/Horizontal-menu/horizontal.css" rel="stylesheet" />
@@ -163,23 +166,482 @@
 			</div>
         </div>
         
-        <!--Breadcrumb-->
-		<section>
-			<div class="bannerimg cover-image bg-background3 sptb-2" data-image-src="../resources/images/banners/banner2.jpg">
-				<div class="header-text mb-0">
+        <!--Sliders Section-->
+		<div>
+			<div class=" cover-image sptb-1 bg-background" data-image-src="../assets/images/banners/banner1.jpg">
+				<div class="header-text1 mb-0">
 					<div class="container">
-						<div class="text-center text-white ">
-							<h1 class="">MoSeva Services</h1>
-							<ol class="breadcrumb text-center">
-								<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-								<li class="breadcrumb-item active text-white" aria-current="page">Services</li>
-							</ol>
+						<div class="row">
+							<div class="col-xl-9 col-lg-9 col-md-12 d-block mx-auto">
+								<div class="search-background bg-transparent">
+									<div class="form row no-gutters ">
+										<div class="form-group col-xl-6 col-lg-6 col-md-12 mb-0 bg-white">
+											<input type="text" class="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="Search best services for you...">
+										</div>
+										<div class="form-group col-xl-3 col-lg-3 col-md-12 select2-lg  mb-0 bg-white">
+											<select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
+												<optgroup label="Categories">
+													<option>Categorie</option>
+													<option value="1">Private</option>
+													<option value="2">Software</option>
+													<option value="3">Banking</option>
+													<option value="4">Finaces</option>
+													<option value="5">Corporate</option>
+													<option value="6">Driver</option>
+													<option value="7">Sales</option>
+												</optgroup>
+											</select>
+										</div>
+										<div class="col-xl-3 col-lg-3 col-md-12 mb-0">
+											<a href="#" class="btn btn-lg btn-block btn-primary br-tl-md-0 br-bl-md-0">Search Here</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /header-text -->
+			</div>
+		</div>
+		<!--/Sliders Section-->
+
+		<!--Breadcrumb-->
+		<div class="bg-white border-bottom">
+			<div class="container">
+				<div class="page-header">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Service Name</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!--/Breadcrumb-->
+
+		<!--Single Service Content-->
+		<section class="sptb">
+			<div class="container">
+				<div class="row">
+					<!--Service list-->
+					<div class="col-xl-9 col-lg-8 col-md-12">
+						<div class="tab-pane active" id="tab-11">
+							<div class="card overflow-hidden">
+								<div class="d-md-flex">
+									<div class="item-card9-img">
+										<!-- <div class="arrow-ribbon bg-primary">Rent</div> -->
+										<div class="item-card9-imgs">
+											<img src="../resources/images/products/h4.png" alt="img" class="cover-image">
+										</div>
+									</div>
+
+									<div class="card border-0 mb-0">
+										<div class="card-body ">
+											<div class="item-card9">
+												<a href="single_category.html" class="bg-cyan p-1 text-white">Web Solution</a>
+
+												<br><br>
+												
+												<a href="#!" class="text-dark">
+													<h4 class="font-weight-semibold mt-1">
+														MIXblack India Pvt. Ltd. 
+													</h4>
+												</a>
+
+												<p class="mb-0 leading-tight">Service description here/......</p>
+											</div>
+										</div>
+
+										<div class="card-footer pt-4 pb-4">
+											<div class="item-card9-footer d-flex">
+												<div class="item-card9-cost">
+													<h4 class="text-dark font-weight-semibold mb-0 mt-0">₹ 2,263.99</h4>
+												</div>
+												<div class="ml-auto">
+													<div class="rating-stars block">
+														<input type="number" readonly="readonly" class="rating-value star" name="rating-stars-value"  value="3">
+														<div class="rating-stars-container">
+															<div class="rating-star sm">
+																<i class="fa fa-star"></i>
+															</div>
+															<div class="rating-star sm">
+																<i class="fa fa-star"></i>
+															</div>
+															<div class="rating-star sm">
+																<i class="fa fa-star"></i>
+															</div>
+															<div class="rating-star sm">
+																<i class="fa fa-star"></i>
+															</div>
+															<div class="rating-star sm">
+																<i class="fa fa-star"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="expanel expanel-default mt-4">
+									<div class="expanel-body">
+										<div class="container">
+											<hr>
+											<!-- FAQ Section -->
+											<h3>FAQ</h3>
+											<!-- Accordion begin -->
+											<ul class="demo-accordion accordionjs m-0" data-active-index="false">
+												<!-- Section 1 -->
+												<li>
+													<div><h3>Section 1</h3></div>
+													<div>
+														<!-- Your text here. For this demo, the content is generated automatically. -->
+													</div>
+												</li>
+
+												<!-- Section 2 -->
+												<li>
+													<div><h3>Section 2</h3></div>
+													<div>
+														<!-- Your text here. For this demo, the content is generated automatically. -->
+													</div>
+												</li>
+
+												<!-- Section 3 -->
+												<li>
+													<div><h3>Section 3</h3></div>
+													<div>
+														<!-- Your text here. For this demo, the content is generated automatically. -->
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--Right Side Content-->
+					<div class="col-xl-3 col-lg-4 col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h3 class="card-title">Categories</h3>
+							</div>
+							<div class="card-body">
+								<div class="" id="container">
+									<div class="filter-product-checkboxs">
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Computer<span class="label label-secondary float-right">14</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Services<span class="label label-secondary float-right">22</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox3" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Jobs<span class="label label-secondary float-right">78</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox4" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">RealEstates<span class="label label-secondary float-right">35</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox5" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Clothing<span class="label label-secondary float-right">23</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox6" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Home & Garden<span class="label label-secondary float-right">14</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Beauty & Spa<span class="label label-secondary float-right">45</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Restaurant<span class="label label-secondary float-right">34</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Travel<span class="label label-secondary float-right">12</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Event<span class="label label-secondary float-right">18</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Health & fitness<span class="label label-secondary float-right">02</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Electronics<span class="label label-secondary float-right">15</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Mobile<span class="label label-secondary float-right">32</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Vehicle<span class="label label-secondary float-right">23</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Education<span class="label label-secondary float-right">19</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Constructions<span class="label label-secondary float-right">12</span></a>
+											</span>
+										</label>
+										<label class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<span class="custom-control-label">
+												<a href="#" class="text-dark">Pets & Animals<span class="label label-secondary float-right">05</span></a>
+											</span>
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Right Side Content-->
+				</div>
+			</div>
+		</section>
+		<!--Single Service Content -->
+
+		<!--Related Services-->
+		<section class="sptb bg-transparent mb-3">
+			<div class="container">
+				<div class="section-title center-block text-left">
+					<h3>Related Services</h3>
+				</div>
+
+				<div id="myCarousel2" class="owl-carousel owl-carousel-icons2">
+					<!-- Wrapper for carousel items -->
+					<div class="item">
+						<div class="card mb-0">
+							<div class="item-card7-imgs">
+								<a href="single_service.html"></a>
+								<img src="../resources/images/products/products/b3.jpg" alt="img" class="cover-image">
+							</div>
+
+							<div class="item-card7-overlaytext">
+									<a href="single_service.html" class="text-white"> Web Solution </a>
+							</div>
+
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a href="single_service.html" class="text-dark">
+											<h4 class=""> MIXblack India Pvt. Ltd. </h4>
+										</a>
+									</div>
+
+									<h4 class="mb-0 mt-3 btn btn-cyan btn-block h4">
+										<del class="h6 text-white ml-2"> ₹ 2,139.0 </del>
+										₹ 398.99
+									</h4>
+
+									<div class="product-5-rating text-right mt-1">
+										Rating:
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="item">
+						<div class="card mb-0">
+							<div class="item-card7-imgs">
+								<a href="single_service.html"></a>
+								<img src="../resources/images/products/products/b3.jpg" alt="img" class="cover-image">
+							</div>
+
+							<div class="item-card7-overlaytext">
+									<a href="single_service.html" class="text-white"> Web Solution </a>
+							</div>
+
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a href="single_service.html" class="text-dark">
+											<h4 class=""> MIXblack India Pvt. Ltd. </h4>
+										</a>
+									</div>
+
+									<h4 class="mb-0 mt-3 btn btn-cyan btn-block h4">
+										<del class="h6 text-white ml-2"> ₹ 2,139.0 </del>
+										₹ 398.99
+									</h4>
+
+									<div class="product-5-rating text-right mt-1">
+										Rating:
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card mb-0">
+							<div class="item-card7-imgs">
+								<a href="single_service.html"></a>
+								<img src="../resources/images/products/products/b3.jpg" alt="img" class="cover-image">
+							</div>
+
+							<div class="item-card7-overlaytext">
+									<a href="single_service.html" class="text-white"> Web Solution </a>
+							</div>
+
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a href="single_service.html" class="text-dark">
+											<h4 class=""> MIXblack India Pvt. Ltd. </h4>
+										</a>
+									</div>
+
+									<h4 class="mb-0 mt-3 btn btn-cyan btn-block h4">
+										<del class="h6 text-white ml-2"> ₹ 2,139.0 </del>
+										₹ 398.99
+									</h4>
+
+									<div class="product-5-rating text-right mt-1">
+										Rating:
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card mb-0">
+							<div class="item-card7-imgs">
+								<a href="single_service.html"></a>
+								<img src="../resources/images/products/products/b3.jpg" alt="img" class="cover-image">
+							</div>
+
+							<div class="item-card7-overlaytext">
+									<a href="single_service.html" class="text-white"> Web Solution </a>
+							</div>
+
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a href="single_service.html" class="text-dark">
+											<h4 class=""> MIXblack India Pvt. Ltd. </h4>
+										</a>
+									</div>
+
+									<h4 class="mb-0 mt-3 btn btn-cyan btn-block h4">
+										<del class="h6 text-white ml-2"> ₹ 2,139.0 </del>
+										₹ 398.99
+									</h4>
+
+									<div class="product-5-rating text-right mt-1">
+										Rating:
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="card mb-0">
+							<div class="item-card7-imgs">
+								<a href="single_service.html"></a>
+								<img src="../resources/images/products/products/b3.jpg" alt="img" class="cover-image">
+							</div>
+
+							<div class="item-card7-overlaytext">
+									<a href="single_service.html" class="text-white"> Web Solution </a>
+							</div>
+
+							<div class="card-body">
+								<div class="item-card7-desc">
+									<div class="item-card7-text">
+										<a href="single_service.html" class="text-dark">
+											<h4 class=""> MIXblack India Pvt. Ltd. </h4>
+										</a>
+									</div>
+
+									<h4 class="mb-0 mt-3 btn btn-cyan btn-block h4">
+										<del class="h6 text-white ml-2"> ₹ 2,139.0 </del>
+										₹ 398.99
+									</h4>
+
+									<div class="product-5-rating text-right mt-1">
+										Rating:
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+										<a href="#" class=""><i class="fa fa-star text-warning"></i></a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!--/Breadcrumb-->
+		<!--/Related Services-->
 
 		<!--Footer Section-->
 		<section>
@@ -304,6 +766,10 @@
 
 		<!-- Star Rating Js-->
 		<script src="../resources/plugins/rating/jquery.rating-stars.js"></script>
+
+		<!---Accordion Js-->
+		<script src="../resources/plugins/accordion/accordion.min.js"></script>
+		<script src="../resources/js/accor.js"></script>
 
 		<!--Counters -->
 		<script src="../resources/plugins/counters/counterup.min.js"></script>
