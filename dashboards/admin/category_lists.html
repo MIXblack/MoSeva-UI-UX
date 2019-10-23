@@ -20,7 +20,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
 
         <!-- Title -->
-        <title>Partner Dashboard | MoSeva</title>
+        <title>All Category | Moseva</title>
         <link rel="stylesheet" href="../assets/fonts/fonts/font-awesome.min.css">
 
         <!-- Sidemenu Css -->
@@ -179,7 +179,7 @@
                             </div>
                             <div class="user-info">
                                 <h2>Name</h2>
-                                <span>Partner</span>
+                                <span>Admin</span>
                             </div>
                         </div>
                     </div>
@@ -288,61 +288,116 @@
 				<div class="app-content  my-3 my-md-5">
                     <div class="side-app">
                         <div class="page-header">
-                            <h4 class="page-title">Admin Dashboard</h4>
+                            <h4 class="page-title">Categories</h4>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Category Lists</li>
                             </ol>
                         </div>
-
-                        <div class="row row-cards">
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-primary-transparent">
-                                            <i class="icon icon-people text-primary"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Users</p>
-                                        <p class="h2 text-center text-primary">3,456</p>
+        
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class=" ">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-primary" href="category_lists.html">All Lists</a>
+                                            </li>
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-light" href="new_category.html">ADD Category</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        
                                 <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-secondary-transparent">
-                                            <i class="icon icon-refresh text-secondary"></i>
+                                    <div class="card-header">
+                                        Category Lists
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table id="example2" class="hover table-bordered border-top-0 border-bottom-0" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>
+                                                        <th>Description</th>
+                                                        <th>Slug</th>
+                                                        <th>Sub Categories</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if( $categories->count() > 0 )
+                                                        @foreach ( $categories as $category )
+                                                            <tr>
+                                                                <td>{{ $category->id }}</td>
+                                                                <td>{{ $category->title }}</td>
+                                                                <td>{!! $category->description !!}</td>
+                                                                <td>{{ $category->slug }}</td>
+                                                                <td>
+                                                                    @if( $category->childrens()->count() > 0 )
+                                                                        @foreach ( $category->childrens as $children )
+                                                                            {{$children->title}},
+                                                                        @endforeach
+                                                                    @endif
+                                                                </td>
+        
+                                                                @if( $category->trashed() )
+                                                                    <td>
+                                                                        <a class="btn btn-info btn-sm" href="{{route('admin.categories.recover',$category->id)}}">
+                                                                            Restore
+                                                                        </a>
+                                                                         | 
+                                                                        <a class="btn btn-danger btn-sm" href="javascript:;" onclick="confirmDelete('{{$category->id}}')">
+                                                                            Delete
+                                                                        </a>
+                                                                    <form id="delete-category-{{$category->id}}" action="{{ route('admin.categories.destroy', $category->slug) }}" method="POST" style="display: none;">
+                                                                    
+                                                                        @method('DELETE')
+                                                                        @csrf
+                                                                    </form>
+                                                                    </td>
+                                                                @else
+                                                                    <td>
+                                                                        <a class="btn btn-info btn-sm" href="{{route('admin.categories.edit',$category->slug)}}" data-toggle="tooltip" data-original-title="Edit">
+                                                                            <i class="fa fa-pencil"></i>
+                                                                        </a> | 
+                                                                        
+                                                                        <a id="trash-category-{{$category->id}}" class="btn btn-warning btn-sm" href="{{route('admin.categories.remove',$category->slug)}}" data-toggle="tooltip" data-original-title="Trash">
+                                                                            <i class="fa fa-trash-o"></i>
+                                                                        </a> | 
+                                                                        
+                                                                        <a class="btn btn-danger btn-sm" href="javascript:;" onclick="confirmDelete('{{$category->id}}')" data-toggle="tooltip" data-original-title="Delete">
+                                                                            <i class="fa fa-times-circle"></i>
+                                                                        </a>
+                                                                        
+                                                                        <form id="delete-category-{{$category->id}}" action="{{ route('admin.categories.destroy', $category->slug) }}" method="POST" style="display: none;">
+                                                                            
+                                                                            @method('DELETE')
+                                                                            @csrf
+                                                                        </form>
+                                                                    </td>
+                                                                @endif
+                                                            </tr>
+                                                        @endforeach
+                                                    @endif
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>
+                                                        <th>Description</th>
+                                                        <th>Slug</th>
+                                                        <th>Sub Categories</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
                                         </div>
-                                        <p class="card-text mt-3 mb-3">Total Vendor</p>
-                                        <p class="h2 text-center text-secondary">2,635</p>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature ">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-info-transparent">
-                                            <i class="icon icon-speech text-info"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Manager</p>
-                                        <p class="h2 text-center text-success-1">245</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg icons shadow-default bg-warning-transparent">
-                                            <i class="icon icon-rocket text-warning"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Revenue</p>
-                                        <p class="h2 text-center text-secondary-1">₹ 5,459</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
+                            </div>
                         </div>
                     </div>
                 </div>

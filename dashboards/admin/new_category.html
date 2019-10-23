@@ -20,7 +20,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
 
         <!-- Title -->
-        <title>Partner Dashboard | MoSeva</title>
+        <title>Add Category | Moseva</title>
         <link rel="stylesheet" href="../assets/fonts/fonts/font-awesome.min.css">
 
         <!-- Sidemenu Css -->
@@ -179,7 +179,7 @@
                             </div>
                             <div class="user-info">
                                 <h2>Name</h2>
-                                <span>Partner</span>
+                                <span>Admin</span>
                             </div>
                         </div>
                     </div>
@@ -288,61 +288,112 @@
 				<div class="app-content  my-3 my-md-5">
                     <div class="side-app">
                         <div class="page-header">
-                            <h4 class="page-title">Admin Dashboard</h4>
+                            <h4 class="page-title">Categories</h4>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">New Category</li>
                             </ol>
                         </div>
-
-                        <div class="row row-cards">
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-primary-transparent">
-                                            <i class="icon icon-people text-primary"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Users</p>
-                                        <p class="h2 text-center text-primary">3,456</p>
+        
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class=" ">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-light" href="category_lists.html">All Lists</a>
+                                            </li>
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-primary" href="new_category.html">Add Category</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        
                                 <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-secondary-transparent">
-                                            <i class="icon icon-refresh text-secondary"></i>
+                                    <div class="card-header">
+                                        Add New Category
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <form action="{{route('admin.categories.store')}}" method="post" accept-charset="utf-8">
+                                                    @csrf
+        
+                                                    <div class="col-lg-12">
+                                                        @if ($errors->any())
+                                                            <div class="alert alert-danger">
+                                                                <ul>
+                                                                    @foreach ($errors->all() as $error)
+                                                                    <li>{{ $error }}</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+                                                    </div>
+        
+                                                    <div class="col-lg-12">
+                                                        @if (session()->has('message'))
+                                                        <div class="alert alert-success">
+                                                            {{session('message')}}
+                                                        </div>
+                                                        @endif
+                                                    </div>
+        
+                                                    <div class="col-lg-12 p-4">
+                                                        <div class="p-5 border">
+                                                            <div class="form-group">
+                                                                <label class="form-label">Category Name</label>
+                                                                <div class="row gutters-sm">
+                                                                    <div class="col">
+                                                                        <input type="text" name="title" id="txturl" class="form-control" placeholder="Enter Name">
+                                                                    </div>
+                                                                    <span class="col-auto align-self-center">
+                                                                        <span class="form-help" data-toggle="popover" data-placement="top"
+                                                                        data-content="
+                                                                            <p>Category name must be unique and min 5 characters</p>
+                                                                        ">?</span>
+                                                                    </span>
+                                                                </div>
+                                                                <p class="small">{{config('app.url')}}/<span id="url"></span></p>
+                                                                <input type="hidden" name="slug" id="slug">
+                                                            </div>
+                                                    
+                                                            <div class="form-group mt-6">
+                                                                <label class="form-label">Category Description</label>
+                                                                <textarea class="content" name="description" rows="10" cols="80"></textarea>
+                                                            </div>
+        
+                                                            <div class="form-group mt-6">
+                                                                <label class="form-label">Sub Categories</label>
+                                                                <div class="row gutters-sm">
+                                                                    <div class="col">
+                                                                        <select name="parent_id[]" id="parent_id" class="form-control select2" data-placeholder="Choose Browser" multiple>
+                                                                            @if($categories)
+                                                                                <option value="0">Top Level</option>
+                                                                                @foreach($categories as $category)
+                                                                                    <option value="{{$category->id}}">{{ $category->title }}</option>
+                                                                                @endforeach
+                                                                            @endif
+                                                                        </select>
+                                                                    </div>
+                                                                    <span class="col-auto align-self-center">
+                                                                        <span class="form-help" data-toggle="popover" data-placement="top"
+                                                                        data-content="<p>Select parent category to create sub-category, 'Top Leve' is the default main category</p>
+                                                                        ">?</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+        
+                                                            <button type="submit" name="submit" class="btn btn-primary mt-7">Add Category</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                        <p class="card-text mt-3 mb-3">Total Vendor</p>
-                                        <p class="h2 text-center text-secondary">2,635</p>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature ">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-info-transparent">
-                                            <i class="icon icon-speech text-info"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Manager</p>
-                                        <p class="h2 text-center text-success-1">245</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg icons shadow-default bg-warning-transparent">
-                                            <i class="icon icon-rocket text-warning"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Revenue</p>
-                                        <p class="h2 text-center text-secondary-1">₹ 5,459</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
+                            </div>
                         </div>
                     </div>
                 </div>

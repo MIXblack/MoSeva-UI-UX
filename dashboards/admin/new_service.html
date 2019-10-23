@@ -20,7 +20,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
 
         <!-- Title -->
-        <title>Partner Dashboard | MoSeva</title>
+        <title>Add services | Moseva</title>
         <link rel="stylesheet" href="../assets/fonts/fonts/font-awesome.min.css">
 
         <!-- Sidemenu Css -->
@@ -179,7 +179,7 @@
                             </div>
                             <div class="user-info">
                                 <h2>Name</h2>
-                                <span>Partner</span>
+                                <span>Admin</span>
                             </div>
                         </div>
                     </div>
@@ -288,61 +288,154 @@
 				<div class="app-content  my-3 my-md-5">
                     <div class="side-app">
                         <div class="page-header">
-                            <h4 class="page-title">Admin Dashboard</h4>
+                            <h4 class="page-title">Services</h4>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">New Service</li>
                             </ol>
                         </div>
-
-                        <div class="row row-cards">
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-primary-transparent">
-                                            <i class="icon icon-people text-primary"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Users</p>
-                                        <p class="h2 text-center text-primary">3,456</p>
+        
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class=" ">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-light" href="service_lists.html">All Lists</a>
+                                            </li>
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-primary" href="new_service.html">ADD Service</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+        
                                 <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-secondary-transparent">
-                                            <i class="icon icon-refresh text-secondary"></i>
+                                    <div class="card-header">
+                                        Add New Service
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="p-5 border">
+                                                <div class="form-group">
+                                                    <label class="form-label">Service Name</label>
+                                                    <div class="row gutters-sm">
+                                                        <div class="col">
+                                                            <input type="text" class="form-control w-100" name="name" placeholder="Enter Service Name">
+                                                        </div>
+                                                        <span class="col-auto align-self-center">
+                                                            <span class="form-help" data-toggle="popover" data-placement="top"
+                                                            data-content="
+                                                                <p>Service name must be unique and min 5 characters</p>
+                                                            ">?</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Description</label>
+                                                    <textarea class="content" name="example" placeholder="Enter Description"></textarea>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Category</label>
+                                                    <select class="form-control select2" data-placeholder="Choose Browser" multiple>
+                                                        <option value="1" selected>Branch 1</option>
+                                                        <option value="2">Branch 2</option>
+                                                    </select>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Sub Category</label>
+                                                    <select class="form-control select2" data-placeholder="Choose Browser" multiple>
+                                                        <option value="1" selected>Branch 1</option>
+                                                        <option value="2">Branch 2</option>
+                                                    </select>
+                                                </div>
+        
+                                                <div class="row mt-5">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Price</label>
+                                                            <div class="row gutters-sm">
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control w-100"  placeholder="Enter Sub title">
+                                                                </div>
+                                                                <span class="col-auto align-self-center">
+                                                                    <span class="form-help" data-toggle="popover" data-placement="top"
+                                                                    data-content="
+                                                                        <p>price for solve customer problem</p>
+                                                                    ">?</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Offer Price</label>
+                                                            <div class="row gutters-sm">
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control w-100"  placeholder="Enter Sub title">
+                                                                </div>
+                                                                <span class="col-auto align-self-center">
+                                                                    <span class="form-help" data-toggle="popover" data-placement="top"
+                                                                    data-content="
+                                                                        <p>Offer Price is temperory price to market there service</p>
+                                                                    ">?</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Available</label>
+                                                    <select class="form-control select2" data-placeholder="Choose Browser" multiple>
+                                                        <option value="1" selected>Branch 1</option>
+                                                        <option value="2">Branch 2</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Upload Images</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="example-file-input-custom">
+                                                        <label class="custom-file-label">Upload Images</label>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label class="form-label">Upload Video Link</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="example-file-input-custom">
+                                                        <label class="custom-file-label">Upload Video</label>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label >Minimum Booking Time</label>
+                                                    <div class="wd-150 mg-b-30">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">
+                                                                    <i class="fa fa-clock-o tx-16 lh-0 op-6"></i>
+                                                                </div>
+                                                            </div><!-- input-group-prepend -->
+                                                            <input class="form-control" id="tpBasic" placeholder="Set time" type="text">
+                                                        </div>
+                                                    </div><!-- wd-150 -->
+                                                </div>
+        
+                                                <div class="form-group mt-5">
+                                                    <label>Optional</label>
+                                                </div>
+                                                
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light mt-5">Add Service</button>
+                                            </div>
                                         </div>
-                                        <p class="card-text mt-3 mb-3">Total Vendor</p>
-                                        <p class="h2 text-center text-secondary">2,635</p>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature ">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-info-transparent">
-                                            <i class="icon icon-speech text-info"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Manager</p>
-                                        <p class="h2 text-center text-success-1">245</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg icons shadow-default bg-warning-transparent">
-                                            <i class="icon icon-rocket text-warning"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Revenue</p>
-                                        <p class="h2 text-center text-secondary-1">₹ 5,459</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
+                            </div>
                         </div>
                     </div>
                 </div>

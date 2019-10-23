@@ -20,7 +20,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
 
         <!-- Title -->
-        <title>Partner Dashboard | MoSeva</title>
+        <title>Add Pin Code | Moseva</title>
         <link rel="stylesheet" href="../assets/fonts/fonts/font-awesome.min.css">
 
         <!-- Sidemenu Css -->
@@ -179,7 +179,7 @@
                             </div>
                             <div class="user-info">
                                 <h2>Name</h2>
-                                <span>Partner</span>
+                                <span>Admin</span>
                             </div>
                         </div>
                     </div>
@@ -288,61 +288,102 @@
 				<div class="app-content  my-3 my-md-5">
                     <div class="side-app">
                         <div class="page-header">
-                            <h4 class="page-title">Admin Dashboard</h4>
+                            <h4 class="page-title">Moseva Branches</h4>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Add Pin Code</li>
                             </ol>
                         </div>
-
-                        <div class="row row-cards">
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-primary-transparent">
-                                            <i class="icon icon-people text-primary"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Users</p>
-                                        <p class="h2 text-center text-primary">3,456</p>
+        
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class=" ">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-light" href="branch_lists.html">All Lists</a>
+                                            </li>
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-primary" href="pin_code.html">ADD Pin Code</a>
+                                            </li>
+                                            <li class="nav-item m-2">
+                                                <a class="nav-link btn btn-light" href="new_branch.html">ADD Branch</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-secondary-transparent">
-                                            <i class="icon icon-refresh text-secondary"></i>
+        
+                                <div class="row row-deck">
+                                    <div class="col-lg-5">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-title">New Pin Code</div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="form-group mt-4">
+                                                    <div class="row">
+                                                        <div class="col-lg-3">
+                                                            <label class="form-label">Pin Code</label>
+                                                        </div>
+        
+                                                        <div class="col-lg-9">
+                                                            <div class="row gutters-sm">
+                                                                <div class="col">
+                                                                    <input type="text" class="form-control" id="pinCode"  placeholder="Enter Pin Code">
+                                                                </div>
+                                                                <span class="col-auto align-self-center">
+                                                                    <span class="form-help" data-toggle="popover" data-placement="top"
+                                                                    data-content="
+                                                                        <p>Pin Code must be IN or CDN format. You can use an extended ZIP+4 code to determine address more accurately</p>
+                                                                    ">?</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-footer">
+                                                    <div class="row">
+                                                        <div class="col-lg-3"></div>
+                                                        <div class="col-lg-6">
+                                                            <button type="submit" class="btn btn-primary btn-block">Add Pin Code</button>
+                                                        </div>
+                                                        <div class="col-lg-3"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <p class="card-text mt-3 mb-3">Total Vendor</p>
-                                        <p class="h2 text-center text-secondary">2,635</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="card-title">Pin Code Lists</div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table id="example2" class="hover table-bordered border-top-0 border-bottom-0" >
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Pin Codes</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Pin Codes</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature ">
-                                        <div class="fa-stack fa-lg fa-1x icons shadow-default bg-info-transparent">
-                                            <i class="icon icon-speech text-info"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Manager</p>
-                                        <p class="h2 text-center text-success-1">245</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
-
-                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                                <div class="card">
-                                    <div class="card-body text-center feature">
-                                        <div class="fa-stack fa-lg icons shadow-default bg-warning-transparent">
-                                            <i class="icon icon-rocket text-warning"></i>
-                                        </div>
-                                        <p class="card-text mt-3 mb-3">Total Revenue</p>
-                                        <p class="h2 text-center text-secondary-1">₹ 5,459</p>
-                                    </div>
-                                </div>
-                            </div><!-- COL END -->
+                            </div>
                         </div>
                     </div>
                 </div>
